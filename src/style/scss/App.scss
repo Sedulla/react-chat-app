@@ -1,0 +1,113 @@
+// Components Stylesheets
+
+@import '../../components/chatContent/chatContent';
+@import '../../components/chatList/chatList';
+@import '../../components/chatScreen/chatScreen';
+@import '../../components/nav/nav';
+@import '../../components/userProfile/userProfile';
+
+// Helpers
+
+@mixin d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS Start */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Consolas, 'Courier New', monospace;
+}
+
+#root {
+  background-color: #f0f0f0;
+  @include d-flex;
+  height: 100%;
+}
+
+.__main {
+  background-color: #fff;
+  display: flex;
+  max-width: 90%;
+  min-height: 80vh;
+  margin: auto;
+  padding: 20px;
+  padding-left: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 230px;
+  height: 47px;
+  line-height: 47px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
+  display: flex;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #4664ff;
+    color: #fff;
+    transform: scale(1.02);
+  }
+}
+
+.btn {
+  i {
+    flex: 0.2;
+    @include d-flex;
+    height: 100%;
+    font-size: 18px;
+    border-right: 1px solid #ebe7fb;
+  }
+
+  span {
+    flex: 0.8;
+    @include d-flex;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: #6c84ff;
+  border-radius: 10px;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3b5bfe;
+}
